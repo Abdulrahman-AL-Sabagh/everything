@@ -23,9 +23,14 @@ dependencies {
     implementation("io.quarkus:quarkus-hibernate-orm")
     implementation("io.quarkus:quarkus-resteasy")
     implementation("io.quarkus:quarkus-jdbc-postgresql")
+    implementation("org.assertj:assertj-build:3.24.2")
+    implementation("org.assertj:assertj-db:2.0.2")
 
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
+
+    testImplementation("org.assertj:assertj-core:3.19.0")
+
 }
 
 group = "everything.service"
