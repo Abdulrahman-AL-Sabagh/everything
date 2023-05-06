@@ -40,10 +40,9 @@ class UserResourceTest {
     }
 
 
-
     @Test
     @Transactional
-    fun `test if user is created and retuernd by the api`() {
+    fun `test if user is created and returned by the api`() {
         val max = User(name = "max", email = "max@max.com", password = "12345678")
         given().contentType(MediaType.APPLICATION_JSON)
             .body(max)
