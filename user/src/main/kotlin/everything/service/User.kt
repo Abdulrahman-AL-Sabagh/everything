@@ -1,5 +1,6 @@
 package everything.service
 
+import com.fasterxml.jackson.annotation.JsonIgnore
 import io.quarkus.hibernate.orm.panache.kotlin.PanacheEntity
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
@@ -13,6 +14,7 @@ data class User(
     val id: Long? = null,
     val name: String = "",
     val email: String = "",
+    @JsonIgnore
     val password: String = ""
 ) {
     constructor(name: String, email: String, password: String) : this(null, name, email, password)
